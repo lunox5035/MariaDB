@@ -25,4 +25,3 @@ SELECT SIGN(20), SIGN(- 100), SIGN(0);
 -- greatest(x,y,...), least(x,y,...):
 select greatest(10,40,20,50),least(10,40,20,50);
 select greatest('b','A','C','B'),greatest('hello','help','hell');
-
