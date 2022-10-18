@@ -20,7 +20,7 @@ try:
 
 
     # 4. 결과받아오기
-    results= cursor.fetchall();
+    results= cursor.fetchall()
 
 
     # 5. 자원 정리
