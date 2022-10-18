@@ -48,7 +48,7 @@ try:
     cursor = db.cursor()
 
     # 3. sql(insert 문) 실행
-    sql = 'insert into pet values("성탄이", "안대혁", "dog", "m", "2018-12-25", null)'
+    sql = "insert into pet values('소금이','여혜린','cat','m','2014-04-20',null)"
     count = cursor.execute(sql)
 
     # 4. commit

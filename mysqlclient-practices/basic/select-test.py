@@ -3,19 +3,21 @@ from MySQLdb.cursors import DictCursor
 
 try:
     # 1. 연결
-    db=connect(
+    db = connect(
         user='webdb',
-        host='142.251.42.196',
-        port= 3306,
-        db= 'webdb',
-        charset= 'utf8')
+        password='webdb',
+        host='127.0.0.1',
+        port=3306,
+        db='webdb',
+        charset='utf8')
 
-    # 2.
+    # 2. cursor 생성
     cursor = db.cursor(DictCursor)
 
     # 3. sql()
-    sql= "select name, owner, specues, gender, data_format(birth, %Y-%m-%d) as birth, from pet"
+    sql = "select name, owner, specues, gender, data_format(birth, '%Y-%m-%d') as birth, from pet"
     count = cursor.execute(sql)
+
 
     # 4. 결과받아오기
     results= cursor.fetchall();

@@ -11,7 +11,7 @@ try:
         charset='utf8')
 
 
-    # 2.
+    # 2. cursor 생성
     cursor = db.cursor()
 
     # 3. sql()
@@ -28,7 +28,7 @@ try:
 
 
     # 결과 확인
-    print(f'실행 결과: {"성공" if count == 1 else "실패"}')
+    print(f'실행 결과: {"성공" if count >= 1 else "실패"}')
 
 
     # 에러 처리
