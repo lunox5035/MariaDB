@@ -17,7 +17,7 @@ def list_book():
         db =conn()
         cursor = db.cursor(DictCursor)
 
-        sql = f'select title,price,category_no from book order by no desc'
+        sql = f'select title,price,b.name as name from book a , category b where a.category_no=b.no'
         cursor.execute(sql)
 
         results = cursor.fetchall()
@@ -34,5 +34,5 @@ def add_book():
     results = list_book()
 
     for index, result in enumerate(results):
-        print(f'{index + 1}\\{result["title"]}\\{result["price"]}\\{result["category_no"]}')
+        print(f'{index + 1}\\{result["title"]}\\{result["price"]}\\{result["name"]}')
 

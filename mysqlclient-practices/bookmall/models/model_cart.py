@@ -17,7 +17,8 @@ def list_cart():
         db =conn()
         cursor = db.cursor(DictCursor)
 
-        sql = 'select stack, book_no from cart order by no desc'
+        sql = \
+            'select stack, title from cart a ,book b where a.book_no= b.no'
         cursor.execute(sql)
 
         results = cursor.fetchall()
@@ -34,5 +35,5 @@ def add_cart():
     results = list_cart()
 
     for index, result in enumerate(results):
-        print(f'{index + 1}\\{result["stack"]}\\{result["book_no"]}')
+        print(f'{index + 1}\\{result["title"]}\\{result["stack"]}')
 

@@ -16,7 +16,9 @@ def list_orders():
     try:
         db =conn()
         cursor = db.cursor(DictCursor)
-        sql = 'select order_no,address,cart_no,member_no from orders order by no desc'
+        sql = 'select name,email ,(price*stack)as price, address ' \
+              'from orders a ,cart b,member c ,book d ' \
+              'where a.cart_no=b.no and a.member_no=c.no and b.book_no=d.no'
         cursor.execute(sql)
 
         results = cursor.fetchall()
@@ -33,6 +35,6 @@ def add_orders():
     results = list_orders()
 
     for index, result in enumerate(results):
-        print(f'{index + 1}\\{result["order_no"]}\\{result["address"]}\\{result["cart_no"]}\\{result["member_no"]}')
+        print(f'{index + 1}\\{result["name"]}\\{result["email"]}\\{result["price"]}\\{result["address"]}')
 
 
