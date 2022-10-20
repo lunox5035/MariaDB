@@ -1,5 +1,6 @@
 from MySQLdb import connect, OperationalError
 
+
 try:
     # 연결
     db = connect(

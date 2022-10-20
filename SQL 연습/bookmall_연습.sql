@@ -9,6 +9,7 @@ select * from book;
 insert into book value (1,'파칭코',14220,1);
 insert into book value (2,'IT 5분 잡학사전',14850,3);
 insert into book value (3,'최소한의 이웃',14220,2);
+select name as "car_name";
 
 -- 2 카테고리 테이블
 select * from category;
@@ -41,3 +42,10 @@ select * from orders;
 insert into orders value(1,1,'세종시 도담동 보람로 96 2005-2202',2,1);
 ALTER TABLE orders drop column pay;
 
+SELECT  COLUMN_NAME
+FROM    INFORMATION_SCHEMA.COLUMNS
+WHERE   TABLE_NAME = 'book';
+
+
+SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'orders';
+ ind=(SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = "orders");
