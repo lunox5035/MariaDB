@@ -18,7 +18,7 @@ def list_orders():
         cursor = db.cursor(DictCursor)
         sql = 'select name,email ,(price*stack)as price, address ' \
               'from orders a ,cart b,member c ,book d ' \
-              'where a.cart_no=b.no and a.member_no=c.no and b.book_no=d.no'
+              'where a.cart_no=b.no and a.member_no=c.no and b.no=d.cart_no'
         cursor.execute(sql)
 
         results = cursor.fetchall()
