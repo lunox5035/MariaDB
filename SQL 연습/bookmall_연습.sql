@@ -51,7 +51,7 @@ WHERE   TABLE_NAME = 'book';
 
 select title, stack, (price*stack) as pay 
 from cart a ,book b 
-where a._no= b.;
+where a.no= b.cart_no;
 
 
 SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'orders';
