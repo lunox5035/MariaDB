@@ -1,5 +1,6 @@
 package com.bitacademy.bookshop.dao.test;
 
+import com.bitacademy.bookshop.dao.AuthorDao;
 import com.bitacademy.bookshop.vo.AuthorVo;
 
 public class AuthoDaoTest {
