@@ -1,4 +1,4 @@
-package PreparedStatement;
+package PreparedStatement_Sample;
 
 public class DeptVo {
 	private Long no;

@@ -1,4 +1,4 @@
-package PreparedStatement;
+package PreparedStatement_Sample;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
