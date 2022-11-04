@@ -32,7 +32,7 @@ public class Delete {
 					" where no = ?";
 			pstmt = conn.prepareStatement(sql);
 			
-			//4. Binding
+			//4. Binding (? 값 설정)=몇번째 ?의 값은 ,변수명이다.
 			pstmt.setLong(1, no);
 			
 			//5. SQL 실행
