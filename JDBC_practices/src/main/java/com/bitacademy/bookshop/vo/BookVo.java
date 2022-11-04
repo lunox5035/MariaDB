@@ -4,10 +4,25 @@ public class BookVo {
 	private Long no;
 	private String title;
 	private String status;
+	private String authorName;
+	
+	
+	
+	public String getAuthorName() {
+		return authorName;
+	}
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
+	}
 	private Long authorNo;
+	
+	
+	
+	
 	@Override
 	public String toString() {
-		return "BookVo [no=" + no + ", title=" + title + ", status=" + status + ", authorNo=" + authorNo + "]";
+		return "BookVo [no=" + no + ", title=" + title + ", status=" + status + ", authorName=" + authorName
+				+ ", authorNo=" + authorNo + "]";
 	}
 	public Long getNo() {
 		return no;

@@ -1,6 +1,8 @@
 package com.bitacademy.bookshop.example;
 import java.util.Scanner;
 
+import com.bitacademy.bookshop.example.Book;
+
 public class BookShop {
 	public static void main(String[] args) {
 		Book[] books = new Book[10];
