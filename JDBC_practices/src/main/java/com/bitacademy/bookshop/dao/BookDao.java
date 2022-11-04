@@ -1,4 +1,4 @@
-package com.bitacademy.bookshop.dao.test;
+package com.bitacademy.bookshop.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
