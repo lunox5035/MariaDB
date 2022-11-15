@@ -2,8 +2,9 @@ package com.bitacademy.test;
 
 import java.util.List;
 
-import com.bitacademy.emaillist.dao.EmaillistDao;
 import com.bitacademy.emaillist.vo.EmaillistVo;
+
+import emaillist01.EmaillistDao;
 
 public class EmaillistDaoTest {
 	private static void main(String[] args) {

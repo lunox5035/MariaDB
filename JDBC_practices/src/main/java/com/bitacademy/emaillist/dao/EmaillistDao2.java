@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.bitacademy.emaillist.vo.EmaillistVo;
 
-public class EmaillistDao {
+public class EmaillistDao2 {
 	public Boolean insert(EmaillistVo vo) {
 		return false;
 	}
